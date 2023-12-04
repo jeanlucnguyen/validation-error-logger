@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "icarusmedia/validation-error-logger",
+    "description": "Validation Error Logger",
     "keywords": [
-        ":vendor_name",
+        "IcarusMedia",
         "laravel",
-        ":package_slug"
+        "validation-error-logger"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/icarusmedia/validation-error-logger",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Jean-Luc Nguyen",
+            "email": "jeanlucnguyen@users.noreply.github.com",
             "role": "Developer"
         }
     ],
@@ -35,19 +35,19 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "IcarusMedia\\ValidationErrorLogger\\": "src/",
+            "IcarusMedia\\ValidationErrorLogger\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "IcarusMedia\\ValidationErrorLogger\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-validation-error-logger --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,10 +73,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "IcarusMedia\\ValidationErrorLogger\\ValidationErrorLoggerServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "ValidationErrorLogger": "IcarusMedia\\ValidationErrorLogger\\Facades\\ValidationErrorLogger"
             }
         }
     },
