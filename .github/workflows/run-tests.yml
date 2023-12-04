@@ -58,11 +58,5 @@ jobs:
       - name: List Installed Dependencies
         run: composer show -D
 
-      - name: PHPUnit tests
-        uses: php-actions/phpunit@v3
-        with:
-          php_extensions: "xdebug"
-          bootstrap: vendor/autoload.php
-          configuration: phpunit.xml.dist
-        env:
-          XDEBUG_MODE: coverage
+      - name: Execute tests
+        run: vendor/bin/phpunit
