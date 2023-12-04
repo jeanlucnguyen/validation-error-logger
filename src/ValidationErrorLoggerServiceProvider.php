@@ -2,8 +2,8 @@
 
 namespace IcarusMedia\ValidationErrorLogger;
 
-use Spatie\LaravelPackageTools\Package;
 use Illuminate\Support\ServiceProvider;
+use RuntimeException;
 
 class ValidationErrorLoggerServiceProvider extends ServiceProvider
 {
