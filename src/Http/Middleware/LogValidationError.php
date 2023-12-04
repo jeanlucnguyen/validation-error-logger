@@ -2,9 +2,9 @@
 
 namespace IcarusMedia\ValidationErrorLogger\Http\Middleware;
 
-use App\Models\ValidationErrorLog;
 use Closure;
 use Exception;
+use IcarusMedia\ValidationErrorLogger\Models\ValidationErrorLog;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
