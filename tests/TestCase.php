@@ -2,9 +2,9 @@
 
 namespace IcarusMedia\ValidationErrorLogger\Tests;
 
+use IcarusMedia\ValidationErrorLogger\ValidationErrorLoggerServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use IcarusMedia\ValidationErrorLogger\ValidationErrorLoggerServiceProvider;
 
 class TestCase extends Orchestra
 {
