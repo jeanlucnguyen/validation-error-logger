@@ -2,8 +2,8 @@
 
 namespace IcarusMedia\ValidationErrorLogger;
 
-use Spatie\LaravelPackageTools\Package;
 use Illuminate\Support\ServiceProvider;
+use RuntimeException;
 
 class ValidationErrorLoggerServiceProvider extends ServiceProvider
 {
@@ -27,13 +27,12 @@ class ValidationErrorLoggerServiceProvider extends ServiceProvider
         $this->publishMigrations();
     }
 
-    protected function publishMigrations()
+    protected function publishMigrations(): void
     {
         if (! $this->migrationExists('create_validation_error_logs_table.php')) {
             $this->publishes(
                 [
-                    __DIR__.'/../database/migrations/create_validation_error_logs_table.php.stub'
-                        => database_path('migrations/'.now()->format('Y_m_d_His').'_create_validation_error_logs_table.php'),
+                    __DIR__.'/../database/migrations/create_validation_error_logs_table.php.stub' => database_path('migrations/'.now()->format('Y_m_d_His').'_create_validation_error_logs_table.php'),
                 ],
                 'validation-error-logger-migrations'
             );
