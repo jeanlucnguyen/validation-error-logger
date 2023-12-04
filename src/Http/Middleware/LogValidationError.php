@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace IcarusMedia\ValidationErrorLogger\Http\Middleware;
 
 use App\Models\ValidationErrorLog;
 use Closure;
